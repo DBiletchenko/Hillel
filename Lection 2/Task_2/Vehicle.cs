@@ -10,8 +10,8 @@ namespace Task_2
     {
         public int NumberOfWheels;
         private int _vehicleValue;
-        private readonly string _Manufacturer;
-        private readonly int _serialNumber;
+        private string _Manufacturer;
+        private string _serialNumber;
         public abstract void Move();
         public virtual void Horn()
         {
@@ -19,18 +19,18 @@ namespace Task_2
         }
 
 
-        internal int Serial
-        {
-            get
-            {
-                return _serialNumber;
-            }
-        }
         internal string manufacturer
         {
             get
             {
                 return _Manufacturer;
+            }
+        }
+        internal string Serial
+        {
+            get
+            {
+                return _serialNumber;
             }
         }
 
@@ -57,9 +57,9 @@ namespace Task_2
 
         public Vehicle()
         {
-            Console.WriteLine("You have bought a vehicle");
+
         }
-        public Vehicle(int wheels, string manufacturer, int serialNum)
+        public Vehicle(int wheels, string manufacturer, string serialNum)
         {
             NumberOfWheels = wheels;
             _Manufacturer = manufacturer;
@@ -67,5 +67,5 @@ namespace Task_2
         }
     }
 }
-        
-    
+
+
